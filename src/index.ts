@@ -47,6 +47,13 @@ const routes: Route[] = [
           await import('./admin/admin');
         },
       },
+      {
+        path: 'login',
+        component: 'lit-login',
+        action: async () => {
+          await import('./login/login');
+        },
+      },
     ],
   },
 ];

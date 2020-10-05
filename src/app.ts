@@ -1,8 +1,12 @@
 import { LitElement, html, customElement, css } from 'lit-element';
+import { bootstrapStyles } from '../external/granite-lit-bootstrap';
 
 @customElement('lit-app')
 export class App extends LitElement {
-  static styles = css`
+  static get styles() {
+    return [bootstrapStyles];
+  }
+  /*static styles = css`
     .header {
       padding: 20px;
       font-size: 25px;
@@ -33,19 +37,18 @@ export class App extends LitElement {
       background-color: #008cba;
       color: white;
     }
-  `;
+  `;*/
 
   render() {
     return html`
-      <div class="topnav">
+      <!--<div class="topnav">
         <a class="active" href="/">Home</a>
         <a href="/blog">Blog</a>
         <a href="/about">About</a>
       </div>
       <div class="header">
         <h2>LitElement Website</h2>
-      </div>
-
+      </div>-->
       <slot></slot>
     `;
   }
