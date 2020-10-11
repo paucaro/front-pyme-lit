@@ -1,7 +1,5 @@
 
-## Pyme Website
-
-## LIT FRONT
+## LitElement Pyme Website
 
 A Single Page Application(SPA) based on Web Components using LitElement, Vaadin Router for navigation and TypeScript.
 
@@ -28,8 +26,3 @@ This will open your default browser with the App.
 - `build` builds your app and outputs it in your `dist` directory
 - `test` runs your test suite with Karma
 - `lint` runs the linter for your project
-
-
-## AWS ANGULAR
-
-Amplify from AWS to configure project in Angular [Amplify AWS Angular](https://docs.amplify.aws/start/q/integration/angular)
