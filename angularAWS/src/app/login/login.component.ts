@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { IniciocliComponent } from '../iniciocli/iniciocli.component';
 
 @Component({
   selector: 'app-login',
@@ -10,6 +11,7 @@ export class LoginComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    component: IniciocliComponent
   }
 
 }
