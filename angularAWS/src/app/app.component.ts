@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { APIService } from './API.service';
 import { Pyme } from '../types/pyme';
+import { DataService } from "./dataBinding/data.service";
 
 @Component({
   selector: 'app-root',

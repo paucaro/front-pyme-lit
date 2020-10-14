@@ -9,6 +9,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { IniciocliComponent } from './iniciocli/iniciocli.component';
+import { DataService } from "./dataBinding/data.service";
 
 import {SharedModule} from './shared/shared.module';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
@@ -29,7 +30,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     ReactiveFormsModule,
     SharedModule
   ],
-  providers: [],
+  providers: [  DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
