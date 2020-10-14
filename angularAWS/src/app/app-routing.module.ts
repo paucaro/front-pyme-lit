@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { LoginComponent } from './login/login.component';
 import { IniciocliComponent } from './iniciocli/iniciocli.component';
+import { DataService } from "./dataBinding/data.service";
 
 
 const routes: Routes = [

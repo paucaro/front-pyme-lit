@@ -9,6 +9,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { IniciocliComponent } from './iniciocli/iniciocli.component';
+import { DataService } from "./dataBinding/data.service";
 
 @NgModule({
   declarations: [
@@ -24,7 +25,7 @@ import { IniciocliComponent } from './iniciocli/iniciocli.component';
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [  DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

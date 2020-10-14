@@ -1,0 +1,35 @@
+{
+    "paths": [
+        {
+            "name": "/chuck",
+            "lambdaFunction": "chuckNorris",
+            "privacy": {
+                "open": true
+            },
+            "policyResourceName": "/chuck"
+        }
+    ],
+    "resourceName": "chuckNorrisApi",
+    "apiName": "chuckNorrisApi",
+    "functionArns": [
+        {
+            "lambdaFunction": "chuckNorris"
+        }
+    ],
+    "privacy": {
+        "auth": 0,
+        "unauth": 0,
+        "authRoleName": "amplify-angularaws-dev-160857-authRole",
+        "unAuthRoleName": "amplify-angularaws-dev-160857-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "chuckNorris",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ]
+}
