@@ -11,19 +11,24 @@ import { LoginComponent } from './login/login.component';
 import { IniciocliComponent } from './iniciocli/iniciocli.component';
 import { DataService } from "./dataBinding/data.service";
 
+import {SharedModule} from './shared/shared.module';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    IniciocliComponent
+    IniciocliComponent,
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     /* configure app with AmplifyUIAngularModule */
     AmplifyUIAngularModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    SharedModule
   ],
   providers: [  DataService],
   bootstrap: [AppComponent]
