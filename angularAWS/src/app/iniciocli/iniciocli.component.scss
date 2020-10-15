@@ -32,13 +32,17 @@ footer .cizgi { border-right: 1px solid #535e67; }
 
 #page-content-wrapper {
   min-width: 100vw;
+  padding-top: 30px;
+  padding-left:220px;
+  padding-right:220px;
+  
 }
 
 #wrapper.toggled #sidebar-wrapper {
   margin-left: 0;
 }
 
-@media (min-width: 768px) {
+@media (max-width: 768px) {
   #sidebar-wrapper {
     margin-left: 0;
   }

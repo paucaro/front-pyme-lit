@@ -13,9 +13,9 @@ export class LoginComponent implements OnInit {
   constructor(private data: DataService) { }
 
   ngOnInit(): void {
+ 
     this.data.currentMessage.subscribe(message => this.message = message)
-
-    component: IniciocliComponent;
+    
   }
   getChuckFrase(){
     const path = '/chuck';

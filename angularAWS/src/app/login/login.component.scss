@@ -1,1 +1,19 @@
-@media (max-width: 2000px) { col-sm-8 { border-right: none; } }
+@media (min-width: 1200px) {
+    .custom-container{
+      width: 1000px;
+      
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .custom-container{
+      width: 800px;
+     
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .custom-container{
+      width: 650px;
+    }
+  }
