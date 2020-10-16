@@ -10,6 +10,8 @@ import {API} from 'aws-amplify'
 })
 export class LoginComponent implements OnInit {
   message:string;
+  component:LoginComponent;
+
   constructor(private data: DataService) { }
 
   ngOnInit(): void {
