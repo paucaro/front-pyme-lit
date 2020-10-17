@@ -16,6 +16,15 @@ data class Credito (
     var nombre: String = "",
 
     @ColumnInfo(name = "descripcion")
-    var descripcion: String = ""
+    var descripcion: String = "",
+
+    @ColumnInfo(name = "beneficios")
+    var beneficios: String = "",
+
+    @ColumnInfo(name = "caracteristicas")
+    var caracteristicas: String = "",
+
+    @ColumnInfo(name = "requisitos")
+    var requisitos: String = ""
 
 ): Parcelable

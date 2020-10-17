@@ -5,16 +5,19 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.os.bundleOf
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.neopyme.R
 import com.example.neopyme.adapter.ResultadosAdapter
+import com.example.neopyme.db.entity.Credito
 import com.example.neopyme.util.mostrarToolbar
 import com.example.neopyme.viewmodel.ResultadosViewModel
 import kotlinx.android.synthetic.main.fragment_resultados.*
 
-class ResultadosFragment : Fragment() {
+class ResultadosFragment : Fragment(), ResultadosAdapter.ItemClickListener {
 
     private lateinit var resultadosViewModel: ResultadosViewModel
     lateinit var adapter: ResultadosAdapter
@@ -27,7 +30,7 @@ class ResultadosFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        adapter = ResultadosAdapter(requireContext())
+        adapter = ResultadosAdapter(requireContext(), this)
         mostrarToolbar()
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_resultados, container, false)
@@ -45,10 +48,17 @@ class ResultadosFragment : Fragment() {
         resultadosViewModel = ViewModelProvider(this).get(ResultadosViewModel::class.java)
         resultadosViewModel.getCreditos({
             activity?.runOnUiThread {
-            it.observe(viewLifecycleOwner, Observer {
-                c -> adapter.setCreditos(c)
-            })
+                it.observe(viewLifecycleOwner, Observer { c ->
+                    adapter.setCreditos(c)
+                })
             }
         }, {})
+    }
+
+    override fun onItemClick(credito: Credito) {
+        findNavController().navigate(
+            R.id.action_resultadosFragment_to_resultadoDetalleFragment,
+            bundleOf("credito" to credito)
+        )
     }
 }

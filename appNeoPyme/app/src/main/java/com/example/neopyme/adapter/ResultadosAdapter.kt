@@ -9,13 +9,21 @@ import com.example.neopyme.R
 import com.example.neopyme.db.entity.Credito
 import kotlinx.android.synthetic.main.item_credito.view.*
 
-class ResultadosAdapter (private val context: Context)
-    : RecyclerView.Adapter<ResultadosAdapter.WordViewHolder>() {
+class ResultadosAdapter (
+    private val context: Context,
+    var itemCLickListener: ItemClickListener
+) : RecyclerView.Adapter<ResultadosAdapter.WordViewHolder>() {
+
+    interface ItemClickListener {
+        fun onItemClick(credito: Credito)
+    }
 
     private var creditos = ArrayList<Credito>()
 
     inner class WordViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        val viewHolder = itemView
         fun setData(credito: Credito) {
+            viewHolder.setOnClickListener {itemCLickListener.onItemClick(credito)}
             itemView.nombre_credito.text = credito.nombre
             itemView.descripcion_credito.text = credito.descripcion
         }

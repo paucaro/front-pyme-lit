@@ -12,4 +12,12 @@
     <string name="rango_de_deuda_infocorp">Rango de Deuda INFOCORP</string>
     <string name="motivo_de_pr_stamo">Motivo de préstamo</string>
     <string name="evaluar">Evaluar</string>
+    <string name="beneficios">Beneficios</string>
+    <string name="caracter_sticas">Características</string>
+    <string name="requisitos">Requisitos</string>
+    <string name="pre_aprobar">Pre-Aprobar</string>
+    <string name="mensaje_operador_comunica">Envíenos sus datos y un operador se comunicará en breve con usted</string>
+    <string name="correo_electrOnico">CORREO ELECTRÓNICO</string>
+    <string name="numero_de_telefono">NUMERO DE TELÉFONO</string>
+    <string name="enviar">Enviar</string>
 </resources>
