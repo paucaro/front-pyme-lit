@@ -30,7 +30,7 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="#FinanciamientoATuMedida"
+        android:text="@string/financiamientoatumedida"
         android:textSize="16sp"
         android:textColor="#043263"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
@@ -49,7 +49,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="DNI"
+            android:hint="@string/dni"
             android:inputType="number"
             android:maxLines="1" />
 
@@ -67,7 +67,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="RUC"
+            android:hint="@string/ruc"
             android:inputType="number"
             android:maxLines="1" />
 
@@ -78,12 +78,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:background="@drawable/ic_rounded_button"
-        android:paddingLeft="12dp"
-        android:paddingTop="8dp"
-        android:paddingRight="12dp"
-        android:paddingBottom="8dp"
-        android:text="Pre-Evaluar"
+        android:background="@drawable/ic_rounded_button_blue"
+        android:paddingLeft="16dp"
+        android:paddingTop="12dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="12dp"
+        android:text="@string/pre_evaluar"
         android:textColor="@color/colorLight"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintStart_toStartOf="@+id/guideline"

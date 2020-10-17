@@ -8,7 +8,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
+import androidx.navigation.fragment.findNavController
 import com.example.neopyme.R
+import com.example.neopyme.util.ocultarToolbar
 import com.example.neopyme.viewmodel.MainViewModel
 import kotlinx.android.synthetic.main.main_fragment.*
 
@@ -20,16 +22,15 @@ class MainFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        ocultarToolbar()
         return inflater.inflate(R.layout.main_fragment, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        var navController: NavController = Navigation.findNavController(view)
-
         preevaluar_button.setOnClickListener {
-            navController.navigate(R.id.action_mainFragment_to_resultadosFragment)
+            findNavController().navigate(R.id.action_mainFragment_to_datosFragment)
         }
 
     }

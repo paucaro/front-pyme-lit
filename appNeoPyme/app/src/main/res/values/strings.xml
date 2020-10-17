@@ -2,4 +2,14 @@
     <string name="app_name">neoPyme</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="financiamientoatumedida">#FinanciamientoATuMedida</string>
+    <string name="dni">DNI</string>
+    <string name="ruc">RUC</string>
+    <string name="pre_evaluar">Pre-Evaluar</string>
+    <string name="ya_falta_poco">Ya falta poco...</string>
+    <string name="completa_estos_ultimos_datos">Completa estos ultimos datos</string>
+    <string name="facturaci_n_anual">Facturación Anual</string>
+    <string name="rango_de_deuda_infocorp">Rango de Deuda INFOCORP</string>
+    <string name="motivo_de_pr_stamo">Motivo de préstamo</string>
+    <string name="evaluar">Evaluar</string>
 </resources>

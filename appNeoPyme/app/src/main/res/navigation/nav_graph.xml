@@ -11,12 +11,21 @@
         android:label="main_fragment"
         tools:layout="@layout/main_fragment" >
         <action
-            android:id="@+id/action_mainFragment_to_resultadosFragment"
-            app:destination="@id/resultadosFragment" />
+            android:id="@+id/action_mainFragment_to_datosFragment"
+            app:destination="@id/datosFragment" />
     </fragment>
     <fragment
         android:id="@+id/resultadosFragment"
         android:name="com.example.neopyme.ui.ResultadosFragment"
         android:label="fragment_resultados"
         tools:layout="@layout/fragment_resultados" />
+    <fragment
+        android:id="@+id/datosFragment"
+        android:name="com.example.neopyme.ui.DatosFragment"
+        android:label="fragment_datos"
+        tools:layout="@layout/fragment_datos" >
+        <action
+            android:id="@+id/action_datosFragment_to_resultadosFragment"
+            app:destination="@id/resultadosFragment" />
+    </fragment>
 </navigation>
