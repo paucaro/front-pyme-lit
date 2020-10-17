@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import androidx.navigation.fragment.findNavController
@@ -23,6 +24,9 @@ class MainFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         ocultarToolbar()
+        viewModel = ViewModelProvider(this).get(MainViewModel::class.java)
+//        viewModel = ViewModelProviders.of(this).get(MainViewModel::class.java)
+
         return inflater.inflate(R.layout.main_fragment, container, false)
     }
 
@@ -37,7 +41,7 @@ class MainFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProviders.of(this).get(MainViewModel::class.java)
+
         // TODO: Use the ViewModel
     }
 

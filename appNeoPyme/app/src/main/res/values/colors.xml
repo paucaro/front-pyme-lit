@@ -9,4 +9,7 @@
     <color name="colorLight">#FDFDFD</color>
     <color name="colorYellow">#F8CD51</color>
     <color name="colorGray">#C4C4C4</color>
+
+    <color name="colorBackgroundDark">#224f08</color>
+
 </resources>
