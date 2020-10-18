@@ -30,12 +30,8 @@ class DatosAdicionalesRepository {
         val resp = response.await()
         return resp
     }
-    suspend fun  postRequest(ruc:String,dni:String):Request2DTO{
-        var body:HashMap<String,String> = HashMap<String,String>()
-
-        body.put("document_number",dni)
-        body.put("ruc",ruc)
-        val response = ApiClient.serviceApi.postRequest(body)
+    suspend fun  postRequest(requestInitial: RequestInitial):Request2DTO{
+        val response = ApiClient.serviceApi.postRequest(requestInitial)
         val resp = response.await()
         return resp
 

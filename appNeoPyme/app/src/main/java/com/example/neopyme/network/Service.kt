@@ -16,7 +16,7 @@ interface Service {
     fun getPurposesLoan(): Deferred<List<SimpleDataDTO>>
 
     @POST("api/request/")
-    fun postRequest(@Body body:HashMap<String, String>): Deferred<Request2DTO>
+    fun postRequest(@Body body:RequestInitial): Deferred<Request2DTO>
 
     @PATCH("api/request/")
     fun patchRequest(): Deferred<RequestOkDTO>
