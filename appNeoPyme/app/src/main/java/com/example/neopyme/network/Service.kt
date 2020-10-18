@@ -1,9 +1,8 @@
 package com.example.neopyme.network
 
-import com.example.neopyme.network.DTO.SimpleDataDTO
+import com.example.neopyme.network.DTO.*
 import kotlinx.coroutines.Deferred
-import retrofit2.http.GET
-import retrofit2.http.Query
+import retrofit2.http.*
 
 interface Service {
 
@@ -15,4 +14,20 @@ interface Service {
 
     @GET("api/purposes/")
     fun getPurposesLoan(): Deferred<List<SimpleDataDTO>>
+
+    @POST("api/request/")
+    fun postRequest(@Body body:HashMap<String, String>): Deferred<Request2DTO>
+
+    @PATCH("api/request/")
+    fun patchRequest(): Deferred<RequestOkDTO>
+
+    @PATCH(
+            "/api/request/petitioner")
+    fun patchPetitioner(): Deferred<Petitioner>
+
+
+    @GET("api/products/")
+    fun getProducts( ): Deferred<List<ProductDTO>>
+
+
 }
